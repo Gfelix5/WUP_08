@@ -57,6 +57,7 @@ abline(theweight)
 summary.lm(theweight)
 ```
 
+The model is a comparison to the bears weight. The residual standard error is 5.432, and the adjusted R-squared is 0.7472. In this case it is higher than the last model. Ranking is: chest, then neck, then weight, then Head
 
 
 
