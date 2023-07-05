@@ -27,7 +27,7 @@ abline(simp)
 summary.lm(simp)
 ```
 
-The bears neck is 20 inches around and 57 in length. When looking at the accompanying data, it shows that the residual standard errors is 5.376, and the R-squared is 0.7524. 
+The bears neck is 20 inches around and 57 in length. When looking at the accompanying data, it shows that the residual standard errors is 5.376, and the R-squared is 0.7476. 
  
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
@@ -38,7 +38,7 @@ abline(mychest)
 summary.lm(mychest)
 ```
 
-The residual standard error is 4.939 and lower than the previous model.In addition, the R-squared is 0.791, which is higher than the previous model, 0.7524, and is also better. In ranking chest is above neck.
+The residual standard error is 4.939 and lower than the previous model.In addition, the R-squared is 0.7869, which is higher than the previous model, 0.7524, and is also better. In ranking chest is above neck.
 
 ```{r}
 myhead <- lm(LENGTH~HEADWTH,data=bears)
@@ -47,7 +47,7 @@ abline(myhead)
 summary.lm(myhead)
 ```
 
-As the third model, the residual standard error is 7.32, which is making it worse. In addition, the R-squared is now 0.5409 making it a decline from the previous model (my chest). Comparing all three models, this one is at the bottom of the list. Ranking is: chest, then neck, then Head 
+As the third model, the residual standard error is 7.32, which is making it worse. In addition, the R-squared is now 0.5321.  making it a decline from the previous model (my chest). Comparing all three models, this one is at the bottom of the list. Ranking is: chest, then neck, then Head 
 
 
 ```{r}
@@ -57,8 +57,14 @@ abline(theweight)
 summary.lm(theweight)
 ```
 
-The model is a comparison to the bears weight. The residual standard error is 5.432, and the adjusted R-squared is 0.7472. In this case it is higher than the last model. Ranking is: chest, then neck, then weight, then Head
+The model is a comparison to the bears weight. The residual standard error is 5.432, and the adjusted R-squared is 0.7423. In this case it is higher than the last model. Ranking is: chest, then neck, then weight, then Head
 
+```{r}
+theweight <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(theweight)
+summary.lm(theweight)
+```
 
 
 
