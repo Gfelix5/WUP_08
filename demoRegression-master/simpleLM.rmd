@@ -72,7 +72,7 @@ The model is a comparison to the bears weight. The residual standard error is 4.
 theage <- lm(LENGTH~AGE,data=bears)
 plot(LENGTH~AGE,data=bears)
 abline(theage)
-summary.lm(theage)
+summary.lm(theage)  
 ```
 
 The model is a comparison to the bears weight. The residual standard error is 7.511 , and the adjusted R-squared is 0.5073  In this case it is lower than the all previous models. Ranking is: head length, then chest, then neck, then weight, then Head, then age.
