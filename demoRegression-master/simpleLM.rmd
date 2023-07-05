@@ -47,7 +47,7 @@ abline(myhead)
 summary.lm(myhead)
 ```
 
-
+As the third model, the residual standard error is 7.32, which is making it worse. In addition, the R-squared is now 0.5409 making it a decline from the previous model (my chest). Comparing all three models, this one is at the bottom of the list. Ranking is: chest, then neck, then Head 
 
 
 
